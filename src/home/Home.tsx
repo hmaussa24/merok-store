@@ -68,7 +68,7 @@ export function Home() {
                         Envíos rápidos a todo el país • Stock limitado
                     </p>
                     <button
-                        onClick={() => navigate(`/home/${productos[0]?.id}`)}
+                        onClick={() => navigate(`/`)}
                         className="bg-white text-black px-4 xs:px-6 md:px-8 py-2 md:py-3 rounded-full font-semibold shadow hover:bg-gray-200 transition text-xs xs:text-sm md:text-base"
                     >
                         Comprar ahora
