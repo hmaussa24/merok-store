@@ -89,7 +89,7 @@ export function LandingProducto() {
   return (
     <div className="font-sans text-gray-800 relative bg-white">
       <header className="bg-black py-4 shadow-md fixed top-0 w-full z-50">
-        <div className="container mx-auto text-center cursor-pointer" onClick={() => navigate(`/home/${id}`)}>
+        <div className="container mx-auto text-center cursor-pointer" onClick={() => navigate(`/`)}>
           <h1 className="text-white text-xl font-bold inline-block px-4 py-2 border-2 border-white rounded-lg">
             MEROK
           </h1>
@@ -98,29 +98,32 @@ export function LandingProducto() {
       <div className="pt-16">
         {/* Galería */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-          <div className="space-y-4 relative">
-            <img
-              src={imagenPrincipal || ''}
-              alt="Principal"
-              className="w-full h-auto max-h-[600px] object-contain rounded-xl shadow"
-            />
-            <div className="absolute top-4 right-4 bg-black text-white text-sm font-bold px-3 py-1 rounded">
-              {producto.descuento}% OFF
-            </div>
-            <div className="flex align-items-center justify-center mt-4">
-              <div className="grid grid-cols-5 gap-4">
-                {producto.imagenes.map((img) => (
-                  <img
-                    key={img.id}
-                    src={img.url}
-                    alt={`Mini ${img.id}`}
-                    className={`w-full h-24 object-contain rounded-md hover:scale-105 transition ${isSelected(img.url) ? 'border-2 border-gray-800' : ''}`}
-                    onClick={() => handleMiniaturaClick(img.url)}
-                  />
-                ))}
+            <div className="space-y-4 relative mx-auto" style={{ width: '100%', maxWidth: 600 }}>
+              <div className="relative w-full aspect-[4/5] max-h-[600px]">
+                <img
+                  src={imagenPrincipal || ''}
+                  alt="Principal"
+                  className="w-full h-full object-contain rounded-xl shadow"
+                  style={{ maxHeight: 600 }}
+                />
+                <div className="absolute top-4 left-4 bg-black text-white text-sm font-bold px-3 py-1 rounded">
+                  {producto.descuento}% OFF
+                </div>
+              </div>
+              <div className="flex align-items-center justify-center mt-4">
+                <div className="grid grid-cols-5 gap-4 w-full">
+                  {producto.imagenes.map((img) => (
+                    <img
+                      key={img.id}
+                      src={img.url}
+                      alt={`Mini ${img.id}`}
+                      className={`w-full h-24 object-contain rounded-md hover:scale-105 transition ${isSelected(img.url) ? 'border-2 border-gray-800' : ''}`}
+                      onClick={() => handleMiniaturaClick(img.url)}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
 
           {/* Info */}
           <div className="space-y-5">

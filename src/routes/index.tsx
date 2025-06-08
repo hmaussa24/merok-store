@@ -8,10 +8,12 @@ import { VerProducto } from "../dashboard/productos/ver-producto";
 import { CrearProducto } from "../dashboard/productos/crear-producto";
 import { ListaProductos } from "../dashboard/productos/lista-productos";
 import { Login } from "../login/login";
+import { Home } from "../home/Home";
 
 const AppRoutes = () => 
 (
         <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="home/:id" element={<LandingProducto />} />
             <Route path="checkout/:id/:talla/:color" element={<Checkout />} />
             <Route path="contraentrega" element={<ConfirmacionContraEntrega />} />
