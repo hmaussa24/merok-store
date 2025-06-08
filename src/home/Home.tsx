@@ -53,22 +53,23 @@ export function Home() {
                     </h1>
                 </div>
             </header>
-            <section className="relative w-full h-[650px] md:h-[680px] flex items-center justify-center mt-16 overflow-hidden">
+            <section className="relative w-full h-[300px] xs:h-[380px] sm:h-[440px] md:h-[560px] lg:h-[760px] flex items-center justify-center mt-16 overflow-hidden">
                 <img
                     src="https://raw.githubusercontent.com/hmaussa24/store-back/main/images/banner.png"
                     alt="Modelo"
-                    className="absolute inset-0 w-full h-full object-cover object-top z-0 transition-all duration-300"
+                    className="absolute inset-0 w-full h-full object-cover object-[center_10%] z-0 transition-all duration-300"
+                    style={{ objectPosition: 'center 10%' }}
                 />
-                <div className="relative z-10 max-w-2xl mx-auto bg-black/60 rounded-xl p-8 md:p-12 text-center text-white backdrop-blur-sm shadow-lg">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                <div className="relative z-10 w-full max-w-2xl mx-auto bg-black/60 rounded-xl p-4 xs:p-6 md:p-16 text-center text-white backdrop-blur-sm shadow-lg flex flex-col items-center justify-center mt-16 xs:mt-12 md:mt-0 mb-16 xs:mb-12 md:mb-0 mx-4 xs:mx-6 md:mx-0">
+                    <h1 className="text-xl xs:text-2xl md:text-5xl font-bold mb-2 md:mb-4 drop-shadow-lg leading-tight">
                         Renueva tu estilo con lo último en moda urbana
                     </h1>
-                    <p className="text-lg md:text-xl mb-6 text-gray-200">
+                    <p className="text-sm xs:text-base md:text-xl mb-3 md:mb-6 text-gray-200">
                         Envíos rápidos a todo el país • Stock limitado
                     </p>
                     <button
                         onClick={() => navigate(`/home/${productos[0]?.id}`)}
-                        className="bg-white text-black px-8 py-3 rounded-full font-semibold shadow hover:bg-gray-200 transition"
+                        className="bg-white text-black px-4 xs:px-6 md:px-8 py-2 md:py-3 rounded-full font-semibold shadow hover:bg-gray-200 transition text-xs xs:text-sm md:text-base"
                     >
                         Comprar ahora
                     </button>
