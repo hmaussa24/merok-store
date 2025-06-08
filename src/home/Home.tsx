@@ -47,7 +47,7 @@ export function Home() {
     return (
         <div className="font-sans text-gray-800">
             <header className="bg-black py-4 shadow-md fixed top-0 w-full z-50 mb-15">
-                <div className="container mx-auto text-center cursor-pointer" onClick={() => navigate(`/home/${productos.length > 0 ? productos[0].id : ''}`)}>
+                <div className="container mx-auto text-center cursor-pointer" onClick={() => navigate(`/`)}>
                     <h1 className="text-white text-xl font-bold inline-block px-4 py-2 border-2 border-white rounded-lg">
                         MEROK
                     </h1>
@@ -60,7 +60,19 @@ export function Home() {
                     className="absolute inset-0 w-full h-full object-cover object-[center_10%] z-0 transition-all duration-300"
                     style={{ objectPosition: 'center 10%' }}
                 />
-                <div className="relative z-10 w-full max-w-2xl mx-auto bg-black/60 rounded-xl p-4 xs:p-6 md:p-16 text-center text-white backdrop-blur-sm shadow-lg flex flex-col items-center justify-center mt-16 xs:mt-12 md:mt-0 mb-16 xs:mb-12 md:mb-0 mx-4 xs:mx-6 md:mx-0">
+                <div
+                    className="relative z-10 w-full max-w-2xl mx-auto bg-black/60 rounded-xl p-4 xs:p-6 md:p-16 text-center text-white backdrop-blur-sm shadow-lg flex flex-col items-center justify-center mt-24 xs:mt-20 md:mt-0 mb-24 xs:mb-16 md:mb-0 mx-4 xs:mx-6 md:mx-0"
+                    style={{
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                        marginTop: '48px',
+                        marginBottom: '48px',
+                        maxWidth: '70vw',
+                        left: 0,
+                        right: 0,
+                        position: 'relative',
+                    }}
+                >
                     <h1 className="text-xl xs:text-2xl md:text-5xl font-bold mb-2 md:mb-4 drop-shadow-lg leading-tight">
                         Renueva tu estilo con lo último en moda urbana
                     </h1>
@@ -68,7 +80,7 @@ export function Home() {
                         Envíos rápidos a todo el país • Stock limitado
                     </p>
                     <button
-                        onClick={() => navigate(`/`)}
+                        onClick={() => navigate(`/home/1`)}
                         className="bg-white text-black px-4 xs:px-6 md:px-8 py-2 md:py-3 rounded-full font-semibold shadow hover:bg-gray-200 transition text-xs xs:text-sm md:text-base"
                     >
                         Comprar ahora
